@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Version Directory</title>
+    <style>
+        :root {
+            --primary-glow: #00ff00;
+            --bg-dark: #0f0f0f;
+            --chat-bg: #1a1a1a;
+            --text-main: #e0e0e0;
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --sidebar-bg: rgba(0, 0, 0, 0.6);
+        }
+
+        * { box-sizing: border-box; transition: all 0.3s ease; }
+
+        body {
+            margin: 0; height: 100vh; display: flex;
+            background: var(--bg-dark);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: var(--text-main); overflow: hidden;
+        }
+
+        /* LEFT BRANDING PANEL */
+        .LeftPanel {
+            width: 200px; background: var(--sidebar-bg);
+            backdrop-filter: blur(15px); padding: 30px;
+            border-right: 1px solid var(--glass-border);
+        }
+
+        .LeftPanel h2 {
+            font-size: 24px; margin: 0;
+            background: linear-gradient(90deg, var(--primary-glow), #ffcba6);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        /* CENTRAL INFO AREA (Replced Chat) */
+        .MainContent { 
+            flex: 1; display: flex; flex-direction: column; 
+            padding: 40px; overflow-y: auto;
+            border-left: 3px solid var(--primary-glow);
+            box-shadow: inset 20px 0 40px -20px var(--primary-glow);
+        }
+
+        .VersionCard {
+            background: var(--chat-bg);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            border-left: 5px solid var(--primary-glow);
+            max-width: 800px;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .VersionCard h1 { color: var(--primary-glow); margin-top: 0; }
+        .VersionCard p { line-height: 1.6; font-size: 1.1em; color: #bbb; }
+        
+        .StatsGrid {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 15px; margin-top: 20px;
+        }
+
+        .StatItem {
+            background: rgba(255,255,255,0.05);
+            padding: 15px; border-radius: 10px;
+            border: 1px solid var(--glass-border);
+        }
+
+        /* RIGHT NAVIGATION SIDEBAR */
+        .RightNav {
+            width: 250px; background: var(--sidebar-bg);
+            backdrop-filter: blur(15px); padding: 25px 15px;
+            border-left: 1px solid var(--glass-border);
+            display: flex; flex-direction: column; gap: 12px;
+        }
+
+        .QuickBtn {
+            background: rgba(255,255,255,0.05); 
+            border: 1px solid var(--primary-glow);
+            color: var(--text-main); 
+            padding: 12px 20px; 
+            border-radius: 12px;
+            cursor: pointer; 
+            font-size: 14px; 
+            font-weight: bold;
+            text-align: left;
+            text-decoration: none;
+            display: block;
+        }
+
+        .QuickBtn:hover {
+            background: var(--primary-glow);
+            color: white;
+            box-shadow: 0 0 15px var(--primary-glow);
+            transform: translateX(-5px);
+        }
+
+        .NavLabel {
+            font-size: 12px; color: var(--primary-glow);
+            text-transform: uppercase; letter-spacing: 1px;
+            margin-bottom: 5px; margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="LeftPanel">
+        <h2>AI<br>Versons</h2>
+        <p style="font-size: 12px; opacity: 0.5; margin-top: 20px;">v2.0.26 Stable</p>
+    </div>
+
+    <div class="MainContent">
+        <div class="VersionCard">
+            <h1>Net Ai | New</h1>          
+            <div class="StatsGrid">
+                <div class="StatItem"><b>v0.1.0 :</b> [1/17/2026]</div>
+                <div class="StatItem"><b>v0.0.9 :</b> [1/15/2026]</div>
+                <div class="StatItem"><b>v0.0.6 :</b> [1/12/2026]</div>
+                <div class="StatItem"><b>v0.0.5 :</b> [1/11/2026]</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="RightNav">
+        <div class="NavLabel">Select Version</div>
+        <a href="#" class="QuickBtn">Net ai v0.0.1 <i> (unavalible) </i> </a>
+        <a href="#" class="QuickBtn">Net ai v0.0.2 <i> (unavalible) </i> </a>
+        <a href="#" class="QuickBtn">Net ai v0.0.6 <i> (unavalible) </i> </a>
+        <a href="#" class="QuickBtn">Net ai v0.0.9 <i> (Expired) </i> </a>
+        <div class="NavLabel">Net ai | NEW v0.1.0</div>
+        <a href="https://netstudioai.github.io/Net-ai/v0.1.0.Html" class="QuickBtn">Net ai v0.1.0 <i> (Avalible!!) </i> </a>
+    </div>
+
+</body>
+</html>
