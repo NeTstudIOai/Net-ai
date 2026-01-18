@@ -211,7 +211,7 @@
 
     window.onload = () => {
         document.getElementById("tab-title").innerText = `Net AI | ${NET_VERSION}`;
-        document.getElementById("topbar-text").innerText = `Net AI | v${NET_VERSION}`;
+        document.getElementById("topbar-text").innerText = `<i>(Update version!)</i> Net AI | v${NET_VERSION}`;
         document.getElementById("sidebar-version").innerText = `By Aaradhya v${NET_VERSION}`;
 
         const savedGlow = localStorage.getItem("netAiGlow") || "#ff924a";
@@ -337,5 +337,6 @@
 </script>
 </body>
 </html>
+
 
 
